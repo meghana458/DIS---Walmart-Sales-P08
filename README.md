@@ -93,3 +93,11 @@ We used Python for Map Reduce coding
 
 ##### Process:  Will your processing be numeric, or will you need text processing and/or cleaning?
 Our Processing is numeric. We will be calculating the total sales for a store during holidays and Non-holidays. We don’t need any data cleaning.
+
+##### Steps to Execute Mapper and Reducer code:
+  - Right click on folder (P08) and click open-command-window-here-administrator.
+  - Type this command to run the mapper code: python mapper_1.py
+  - The output of mapper function is generated in a file: o.txt.
+  - The above file is used as an input for reducer file.
+  - Type this command to run the reducer code: python reducer_1.py
+  - The output of reducer function is generated in a file: o.txt.
