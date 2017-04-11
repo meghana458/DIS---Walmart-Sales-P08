@@ -5,7 +5,7 @@ import itertools
 import operator
 
 
-f = open("traindup.txt","r")  # open file, read-only raw data
+f = open("train.txt","r")  # open file, read-only raw data
 
 o = open("o.txt", "w") # open file, write - just our key, value pairs
 
