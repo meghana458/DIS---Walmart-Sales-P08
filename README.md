@@ -110,3 +110,7 @@ Our Processing is numeric. We will be calculating the total sales for a store du
 ##### Image for Reducer_1 Output
 
 ![Output1_Img](Output1_Img.JPG)
+
+##### Image for reducer2 Output
+
+![Sales_Holidays](Sales_Holidays.JPG)
