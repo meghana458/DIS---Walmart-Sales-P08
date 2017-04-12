@@ -95,9 +95,14 @@ We used Python for Map Reduce coding
 Our Processing is numeric. We will be calculating the total sales for a store during holidays and Non-holidays. We don’t need any data cleaning.
 
 ##### Steps to Execute Mapper and Reducer code:
-  - Right click on folder (P08) and click open-command-window-here-administrator.
-  - Type this command to run the mapper code: python mapper_1.py
-  - The output of mapper function is generated in a file: o.txt.
-  - The above file is used as an input for reducer file.
-  - Type this command to run the reducer code: python reducer_1.py
-  - The output of reducer function is generated in a file: o.txt.
+  - Connect to the virtual machine and go to the hadoop.
+  - Open terminal and direct to folder udacity_training.
+  - Under udacity_training go to code folder and create mapper.py.
+  - This file reads the lines from train.txt which is placed in myinput directory of hadoop.
+  - This file outputs store as key and its corresponding sales as its value and passes it to reducer2.py
+  - Create reducer2.py file which reads the lines from mapper.py file 
+  - It sums up the sales of each store during the holiday and non holiday periods in the above two mapper-reducer jobs created by us.
+  - Type the following command to run the map-reduce jobs through hadoop. hs mapper.py reducer2.py myinput projectoutput
+  - The output of reducer2 is directed to projectoutput/part-00000
+  - To check the output, type the following command hadoop fs -cat projectoutput/part-00000 | less
+  - Copy the output from the command prompt and emailed it our emailid's.
