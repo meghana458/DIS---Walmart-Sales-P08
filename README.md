@@ -106,3 +106,7 @@ Our Processing is numeric. We will be calculating the total sales for a store du
   - The output of reducer2 is directed to projectoutput/part-00000
   - To check the output, type the following command hadoop fs -cat projectoutput/part-00000 | less
   - Copy the output from the command prompt and emailed it our emailid's.
+  
+##### Image for Reducer_1 Output
+
+![Output1_Img(Output1_Img.JPG)
