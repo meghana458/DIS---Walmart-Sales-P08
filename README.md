@@ -115,6 +115,6 @@ Our Processing is numeric. We will be calculating the total sales for a store du
 
 ![Sales_Holidays](Sales_Holidays.JPG)
 
-#####References:
+##### References:
 https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting/data
 
