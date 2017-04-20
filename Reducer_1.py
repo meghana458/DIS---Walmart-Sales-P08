@@ -3,24 +3,31 @@
 # then the key will change and we'll be dealing with the next store
 #import operator
 #import itertools
-#o = open("o.txt","w")
-for line in sys.stdin:
-    data_mapped = line.strip().split("\t")
-    if len(data_mapped) != 3:
-        # Something has gone wrong. Skip this line.
-        continue
+sorted = open("o.txt","r")   
+results = open("results2.txt", "w")   
 
-    thisKey, thisSale, thisHolidays = data_mapped
+salesTotal = 0        
+oldStore = None
+lines = sorted.readlines()
+for line in lines:
+    datalist = line.strip().split("\t")
+	#print len(datalist)
+	
+    if len(datalist) != 3:  # if bad input line
+       continue             # ignore it
 
-    if oldKey and (oldKey != thisKey):
-        print oldKey, "\t", salesTotal
-        oldKey = thisKey;
+    thisStore, thisSale, thisHolidays = datalist  # read into variables
+
+    if oldStore and oldStore != thisStore:        
+        results.write("{0}\t{1}\n".format(oldStore, salesTotal))
+        oldStore = thisStore;
         salesTotal = 0
     else:
-        if thisHolidays == "FALSE":
-                oldKey = thisKey
-                salesTotal += float(thisSale)
-                #print salesTotal, "\t", oldKey, "\t", thisHolidays
-if oldKey != None:
-    print salesTotal, "\t", oldKey, "\t", thisHolidays
-    #o.write("{1}\t{0}\n".format(salesTotal,oldKey)
+	    if thisHolidays == "FALSE":
+               oldStore = thisStore            
+               salesTotal += float(thisSale)
+if oldStore != None: 
+    results.write("{0}\t{1}\n".format(oldStore, salesTotal))
+
+sorted.close() 
+results.close()
